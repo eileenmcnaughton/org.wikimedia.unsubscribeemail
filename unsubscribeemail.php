@@ -125,6 +125,22 @@ function unsubscribeemail_civicrm_alterSettingsFolders(&$metaDataFolders = NULL)
 }
 
 /**
+ * Implements hook_civicrm_navigationMenu().
+ *
+ * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_navigationMenu
+ */
+function unsubscribeemail_civicrm_navigationMenu(&$menu) {
+  _unsubscribeemail_civix_insert_navigation_menu($menu, NULL, array(
+    'label' => ts('Unsubscribe email', array('domain' => 'org.wikimedia.unsubscribeemail')),
+    'name' => 'unsubscribe_email',
+    'url' => 'civicrm/a/#/email/unsubscribe',
+    'permission' => 'access CiviCRM',
+    'parentID' => civicrm_api3('Navigation', 'getvalue', array('name' => 'Contacts', 'return' => 'id', 'options' => array('limit' => 1))),
+  ));
+  _unsubscribeemail_civix_navigationMenu($menu);
+}
+
+/**
  * Functions below this ship commented out. Uncomment as required.
  *
 
@@ -137,19 +153,3 @@ function unsubscribeemail_civicrm_preProcess($formName, &$form) {
 
 } // */
 
-/**
- * Implements hook_civicrm_navigationMenu().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_navigationMenu
- *
-function unsubscribeemail_civicrm_navigationMenu(&$menu) {
-  _unsubscribeemail_civix_insert_navigation_menu($menu, NULL, array(
-    'label' => ts('The Page', array('domain' => 'org.wikimedia.unsubscribeemail')),
-    'name' => 'the_page',
-    'url' => 'civicrm/the-page',
-    'permission' => 'access CiviReport,access CiviContribute',
-    'operator' => 'OR',
-    'separator' => 0,
-  ));
-  _unsubscribeemail_civix_navigationMenu($menu);
-} // */
