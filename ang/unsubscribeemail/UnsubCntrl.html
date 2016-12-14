@@ -47,8 +47,8 @@
                 </a>
                 </td>
                 <td>
-                  <span ng-show="unsubscribeContact.is_opt_out > 0 && !unsubscribeContact.is_opted_out">{{ ts('Contact is already opted out') }} </span>
-                  <span ng-show="unsubscribeContact.is_opt_out > 0 && unsubscribeContact.is_opted_out == 1">{{ ts('Contact has been set to opted out') }} </span>
+                  <span ng-show="unsubscribeContact.is_opt_out > 0 && !unsubscribeContact.opt_out_actioned">{{ ts('Contact is already opted out') }} </span>
+                  <span ng-show="unsubscribeContact.is_opt_out > 0 && unsubscribeContact.opt_out_actioned == 1">{{ ts('Contact has been set to opted out') }} </span>
                   <span ng-show="unsubscribeContact.is_opt_out == 0">
                     <input type="checkbox" ng-model="unsubscribeContact.do_opt_out"/>
                   </span>
@@ -71,8 +71,8 @@
                   <a href="{{unsubscribeEmail.url}}">{{unsubscribeEmail.contact_id_display_name}}</a>
                 </td>
                 <td>
-                  <span ng-show="unsubscribeEmail.is_bulkmail == 0 && !unsubscribeEmail.is_opted_out">{{ ts('Email is not set as bulk email') }}</span>
-                  <span ng-show="unsubscribeEmail.is_bulkmail == 0 && unsubscribeEmail.is_opted_out">{{ ts('Bulk email flag has been removed from this email') }}</span>
+                  <span ng-show="unsubscribeEmail.is_bulkmail == 0 && !unsubscribeEmail.opt_out_actioned">{{ ts('Email is not set as bulk email') }}</span>
+                  <span ng-show="unsubscribeEmail.is_bulkmail == 0 && unsubscribeEmail.opt_out_actioned">{{ ts('Bulk email flag has been removed from this email') }}</span>
                       <span ng-show="unsubscribeEmail.is_bulkmail == 1">
                         <input type="checkbox" ng-model="unsubscribeEmail.do_opt_out"/>
                       </span>
