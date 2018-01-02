@@ -57,6 +57,7 @@
             </table>
           </div>
         </div>
+      </div>
         <div ng-show="unsubscribeEmails[0]"><h3>{{ts('Emails to remove bulk email flag from (non primary)')}}</h3>
           <p>{{ ts('These contacts have %1 as as a non-primary email. Leave them checked and click
             unsubscribe to unset the bulk email flag on them.', {1: formVars.enteredEmail}) }}</p>
@@ -80,9 +81,7 @@
               </tr>
             </table>
           </div>
-        </div>
       </div>
-
     </div>
     <div ng-show="!unsubscribeContacts[0] && !unsubscribeEmails[0] && searchedEmail && searchedEmail == formVars.enteredEmail">
       {{ts ('The email %1 is not used as a the primary email for any contact in your database and it is not subscribed to any bulk emails', {1:
