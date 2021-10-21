@@ -113,7 +113,8 @@ function unsubscribeemail_civicrm_navigationMenu(&$menu) {
     'label' => E::ts('Unsubscribe email'),
     'name' => 'unsubscribe_email',
     'url' => 'civicrm/a/#/email/unsubscribe',
-    'permission' => 'access unsubscribe email form',
+    'permission' => 'access unsubscribe email form,edit all contacts',
+    'operator' => 'OR',
   ]);
   _unsubscribeemail_civix_navigationMenu($menu);
 }

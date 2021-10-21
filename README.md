@@ -9,7 +9,7 @@ Unsubscribe emails, defined as setting `is_opt_out = 1` on the Contact if primar
 
 This extension adds a form with the URL `civicrm/a/#/email/unsubscribe` and a link to the menu: *Contacts->Unsubscribe email*
 
-Access to the form is controlled by the permission: `CiviCRM UnsubscribeEmail: access unsubscribe email form`
+Access to the form is controlled by the permission: `CiviCRM UnsubscribeEmail: access unsubscribe email form` or `CiviCRM: edit all contacts`.
 
 ## Usage
 It is intended to assist in data entry for unsubscribe requests.
