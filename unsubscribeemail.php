@@ -95,15 +95,26 @@ function unsubscribeemail_civicrm_alterSettingsFolders(&$metaDataFolders = NULL)
 }
 
 /**
+ * @param array $permissions
+ */
+function unsubscribeemail_civicrm_permission(&$permissions) {
+  $prefix = 'CiviCRM UnsubscribeEmail: ';
+  $permissions['access unsubscribe email form'] = [
+    $prefix . 'access unsubscribe email form',
+    E::ts('Access the form to unsubscribe any contact by entering email address.'),
+  ];
+}
+
+/**
  * Implements hook_civicrm_navigationMenu().
  */
 function unsubscribeemail_civicrm_navigationMenu(&$menu) {
-  _unsubscribeemail_civix_insert_navigation_menu($menu, NULL, [
-    'label' => ts('Unsubscribe email', ['domain' => 'org.wikimedia.unsubscribeemail']),
+  _unsubscribeemail_civix_insert_navigation_menu($menu, 'Contacts', [
+    'label' => E::ts('Unsubscribe email'),
     'name' => 'unsubscribe_email',
     'url' => 'civicrm/a/#/email/unsubscribe',
-    'permission' => 'access CiviCRM',
-    'parentID' => civicrm_api3('Navigation', 'getvalue', ['name' => 'Contacts', 'return' => 'id', 'options' => ['limit' => 1]]),
+    'permission' => 'access unsubscribe email form',
   ]);
   _unsubscribeemail_civix_navigationMenu($menu);
 }
+
