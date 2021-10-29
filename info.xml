@@ -18,7 +18,7 @@
   <version>1.2</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.35</ver>
+    <ver>5.42</ver>
   </compatibility>
   <comments>Unsubscribe emails, defined as setting is_opt_out = 1
 
