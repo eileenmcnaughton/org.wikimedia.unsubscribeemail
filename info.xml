@@ -18,12 +18,16 @@
   <version>1.2</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.42</ver>
+    <ver>5.53</ver>
   </compatibility>
   <comments>Unsubscribe emails, defined as setting is_opt_out = 1
 
       if primary and is_bulkmail = 0 on the email (for all)</comments>
   <civix>
     <namespace>CRM/Unsubscribeemail</namespace>
+    <format>22.05.2</format>
   </civix>
+  <mixins>
+    <mixin>ang-php@1.0.0</mixin>
+  </mixins>
 </extension>

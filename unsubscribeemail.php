@@ -11,15 +11,6 @@ function unsubscribeemail_civicrm_config(&$config) {
 }
 
 /**
- * Implements hook_civicrm_xmlMenu().
- *
- * @param array $files
- */
-function unsubscribeemail_civicrm_xmlMenu(&$files) {
-  _unsubscribeemail_civix_civicrm_xmlMenu($files);
-}
-
-/**
  * Implements hook_civicrm_install().
  */
 function unsubscribeemail_civicrm_install() {
@@ -69,32 +60,6 @@ function unsubscribeemail_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
 }
 
 /**
- * Implements hook_civicrm_managed().
- *
- * Generate a list of entities to create/deactivate/delete when this module
- * is installed, disabled, uninstalled.
- */
-function unsubscribeemail_civicrm_managed(&$entities) {
-  _unsubscribeemail_civix_civicrm_managed($entities);
-}
-
-/**
- * Implements hook_civicrm_angularModules().
- *
- * Generate a list of Angular modules.
- */
-function unsubscribeemail_civicrm_angularModules(&$angularModules) {
-_unsubscribeemail_civix_civicrm_angularModules($angularModules);
-}
-
-/**
- * Implements hook_civicrm_alterSettingsFolders().
- */
-function unsubscribeemail_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _unsubscribeemail_civix_civicrm_alterSettingsFolders($metaDataFolders);
-}
-
-/**
  * @param array $permissions
  */
 function unsubscribeemail_civicrm_permission(&$permissions) {
@@ -119,3 +84,11 @@ function unsubscribeemail_civicrm_navigationMenu(&$menu) {
   _unsubscribeemail_civix_navigationMenu($menu);
 }
 
+/**
+ * Implements hook_civicrm_entityTypes().
+ *
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
+ */
+function unsubscribeemail_civicrm_entityTypes(&$entityTypes) {
+  _unsubscribeemail_civix_civicrm_entityTypes($entityTypes);
+}
