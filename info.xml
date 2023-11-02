@@ -25,9 +25,12 @@
       if primary and is_bulkmail = 0 on the email (for all)</comments>
   <civix>
     <namespace>CRM/Unsubscribeemail</namespace>
-    <format>22.05.2</format>
+    <format>23.02.1</format>
   </civix>
   <mixins>
     <mixin>ang-php@1.0.0</mixin>
   </mixins>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
