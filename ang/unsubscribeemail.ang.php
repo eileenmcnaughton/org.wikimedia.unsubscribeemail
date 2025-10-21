@@ -17,7 +17,4 @@ return [
   [
     0 => 'ang/unsubscribeemail',
   ],
-  'settings' =>
-  [
-  ],
 ];
