@@ -1,4 +1,4 @@
-(function (angular, $, _) {
+(function (angular, $) {
 
   angular.module('unsubscribeemail').config(function ($routeProvider) {
       $routeProvider.when('/email/unsubscribe', {
@@ -132,4 +132,4 @@
     };
   });
 
-})(angular, CRM.$, CRM._);
+})(angular, CRM.$);
